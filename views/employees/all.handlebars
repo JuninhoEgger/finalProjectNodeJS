@@ -1,0 +1,12 @@
+<h1>Todos os empregados</h1>
+<div class="employees">
+  {{#each employees}}
+    <div class="employee">
+      <h3>{{this.name}}</h3>
+      <p>{{this.email}}</p>
+      <p>{{this.birthDate}}</p>
+      <p>R${{this.salary}}</p>
+      <p>{{this.department}}</p>
+    </div>
+  {{/each}}
+</div>

@@ -1,0 +1,32 @@
+<h1 class="title">Cadastro de <br>Funcionário</h1>
+<form action="/create" method="POST" class="form">
+    <div class="form-control">
+        <label for="name">Nome:</label>
+        <input type="text" name="name" placeholder="Informe o nome completo do empregado">
+    </div>
+    <div class="form-control">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Informe o email">
+    </div>
+
+    <div class="form-control">
+        <label for="birthDate">Data de aniversário</label>
+        <input type="date" name="birthDate" placeholder="Informe a data de aniversário">
+    </div>
+    <div class="form-control">
+        <label for="salary">Salário:</label>
+        <input type="text" name="salary" placeholder="Informe o salário do empregado">
+    </div>
+    <div class="form-control">
+        <label for="department">Cargo:</label>        
+        <select name="department" id="department" required="required">
+                <option value="" disabled selected>selecione...</option>
+                <option value="gerente">Gerente</option>
+                <option value="analistaDeSistemas">Analista de Sistemas</option>
+                <option value="desenvolvedor">Desenvolvedor</option>
+                <option value="dba">DBA</option>
+            </select>
+    </div>
+    
+    <input type="submit" class="btn" value="Gravar">
+</form>
