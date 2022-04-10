@@ -37,6 +37,7 @@ class BusinessRules {
     }
 
     calculateAge(birthDate) {
+        console.log('calculating age...')
         dataAtual = new Date();
         dia = dataAtual.getDate();
         mes = dataAtual.getMonth() + 1;
@@ -55,6 +56,7 @@ class BusinessRules {
         var diferenca = moment(data, "YYYY-MM-DD").diff(moment(dataAniversario, "YYYY-MM-DD"));
         var anos = parseInt(moment.duration(diferenca).asYears());
 
+        console.log(anos)
         if (anos < 18) {
             throw new Error('O funcionário deve ser maior de idade para o cadastro!');
         }
@@ -65,6 +67,7 @@ class BusinessRules {
     }
 
     validateName() {
+        console.log('validating name...')
         var nome = document.getElementById('name').value;
         var cond = !!nome.match(/^[A-ZÀ-Ÿ][A-zÀ-ÿ']+\s([A-zÀ-ÿ']\s?)*[A-ZÀ-Ÿ][A-zÀ-ÿ']+$/) + ' ' + nome;
         if (!cond) {
@@ -73,4 +76,6 @@ class BusinessRules {
     }
 }
 
+var condition = this.dateCondition;
+console.log(condition);
 var businessRules = new BusinessRules();
