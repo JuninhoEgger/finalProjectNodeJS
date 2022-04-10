@@ -13,5 +13,8 @@ function dateLimiter() {
     }
 
     data = ano + "-" + mes + "-" + dia;
+
+    console.log(data)
+
     document.getElementById('birthDate').setAttribute("max", data);
 }
